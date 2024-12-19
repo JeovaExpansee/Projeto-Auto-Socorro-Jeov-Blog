@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: 0.5s;
 }
 
 /* Estilos gerais */
@@ -179,4 +180,56 @@ form button:hover {
 .contact-item a:hover {
     color: #FFD700;
 }
+.nav-bar-celular{
+    display: none;
+}
+.nav-bar-cel{
+    display: none;
+}
+@media screen and (max-width:720px) {
+    body{
+        background-color: black;
+    }
+    .nav-bar{
+        display: none;
+    }
 
+    .nav-bar-cel.activate{
+        display: flex;
+        background-color: #000;
+        border: 1px solid white;
+        border-radius: 15px;
+        flex-direction: column;
+        position: absolute;
+        margin-left: -28px;
+        margin-top: 80px;
+    }
+    .nav-bar-celular{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50px;
+        gap: 5px;
+        height: 50px;
+    }
+    .nav-bar-celular.activate{
+        transform: translateY(-20px);
+    }
+
+    .nav-bar-celular .linha{
+        width: 50px;
+        height: 5px;
+        background-color: white;
+        transition: 0.5s;
+    }
+    .nav-bar-celular.activate .linha-meio{
+        display: none;
+    }
+    .nav-bar-celular.activate .linha-inicio{
+        transform: rotate(-45deg) translateY(23px) translateX(-30px);
+    }
+    .nav-bar-celular.activate .linha-fim{
+        transform:  rotate(45deg) translateY(0) translateX(-10px);
+    }
+
+}
