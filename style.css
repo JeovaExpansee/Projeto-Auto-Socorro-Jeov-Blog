@@ -7,6 +7,10 @@
 
 /* Estilos gerais */
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
